@@ -5,13 +5,18 @@
 package Main;
 
 import java.awt.Color;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  *
@@ -22,8 +27,8 @@ public class Display {
     String day;
     GameManager gm;
     JFrame window;
-    public JPanel bgPanel[] = new JPanel[14]; //window 6 หน้า
-    public JLabel bgLabel[] = new JLabel[14];
+    public JPanel bgPanel[] = new JPanel[20]; //window 19 หน้า
+    public JLabel bgLabel[] = new JLabel[20];
     
     public Display(GameManager gm){
         this.gm = gm;
@@ -37,12 +42,13 @@ public class Display {
 
     public void createMainField(){
         window = new JFrame();
-        window.setSize(1295, 750); //ขนาดหน้าต่าง
+        window.setSize(1295, 715); //ขนาดหน้าต่าง
         window.setResizable(false);
+        window.setLocationRelativeTo(null);
         window.setTitle("Bingo Days Game"); //ชื่อบนหัวหน้าต่าง
+        //window.setIconImage(Toolkit.getDefaultToolkit().getImage("logo.png"));  //ไอคอน
         
-        //กดปิดwindow
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//กดปิดwindow
         
         //Background
         window.getContentPane().setBackground(Color.black);
@@ -72,8 +78,6 @@ public class Display {
         button.setContentAreaFilled(false);
         button.setFocusPainted(false);
         button.setBorderPainted(false);
-        //button.setLocation(x:360, y:256);
-        
         
         ImageIcon buttonIcon = new ImageIcon(getClass().getClassLoader().getResource(buttonName)); // เพิ่มรูปปุ่ม
         button.setIcon(buttonIcon);
@@ -81,8 +85,57 @@ public class Display {
         button.addActionListener(gm.aHandler);
         button.setActionCommand(command);
         
-        
         bgPanel[bgNum].add(button);
+    }
+    
+    public void createXbutton(int bgNum, int x, int y, int width, int height, String buttonName){
+        JButton Xbutton = new JButton();
+        Xbutton.setBounds(x, y, width, height);
+        Xbutton.setBackground(null);
+        Xbutton.setContentAreaFilled(false);
+        Xbutton.setFocusPainted(false);
+        Xbutton.setBorderPainted(false);
+        
+        ImageIcon buttonIcon = new ImageIcon(getClass().getClassLoader().getResource(buttonName)); // เพิ่มรูปปุ่ม
+        Xbutton.setIcon(buttonIcon);
+        
+        Xbutton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // remove the previous JFrame
+		bgPanel[bgNum].setVisible(false);
+		window.dispose();
+            }
+        });
+	bgPanel[bgNum].add(Xbutton);
+ 	
+    }
+    
+    public void createInputNameFrame(int bgNum){
+
+        JTextField txtName = new JTextField("Enter your name");
+        txtName.setSelectedTextColor(Color.black);
+        txtName.setBounds(656, 350, 250, 50);
+        bgPanel[bgNum].add(txtName);
+        
+        JButton setButton = new JButton();
+        setButton.setBounds(550, 450, 200, 89);
+        setButton.setBackground(null);
+        setButton.setContentAreaFilled(false);
+        setButton.setFocusPainted(false);
+        setButton.setBorderPainted(false);
+        
+        ImageIcon setbuttonIcon = new ImageIcon(getClass().getClassLoader().getResource("setButton copy.png")); // เพิ่มรูปปุ่ม
+        setButton.setIcon(setbuttonIcon);
+        bgPanel[bgNum].add(setButton);
+        
+        setButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                JOptionPane.showMessageDialog(bgPanel[bgNum], "Hi, WELCOME " + txtName.getText() + " to The Bingo Days.", "Hi", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+       
+       createNextButton(3, 560, 580, 200, 67, "continueButton.png", "goScreen4");
     }
     
     public void generateScreen(){
