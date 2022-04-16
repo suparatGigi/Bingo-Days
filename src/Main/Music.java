@@ -4,21 +4,17 @@
  */
 package Main;
 
+import java.net.URL;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
 /**
  *
- * @author gigi
+ * 
  */
-import javax.sound.sampled.*;
-import java.net.URL;
-
-public class Sound {
+public class Music {
     Clip clip;
-    //URL soundURL[] = new URL[51]; 
-    
-    //public Sound() {
-       // soundURL[0] = getClass().getResource("C:\\Users\\gigi\\Downloads\\Bingo Days\\Bingo Days\\src\\audio\\sound_1.wav");
-        
-    //}
     
     public void setFile(URL name) {
         try {
