@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
  * 
  */
 public class ActionHandler implements ActionListener {
-    หด้เด้เด
+    
     GameManager gm;
     
     public ActionHandler(GameManager gm){
