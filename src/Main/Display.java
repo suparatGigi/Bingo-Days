@@ -24,7 +24,7 @@ import javax.swing.JTextField;
  */
 
 public class Display {
-    System.out.println("artar");
+    System.out.println("gigi");
     String day;
     GameManager gm;
     JFrame window;
