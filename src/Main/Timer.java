@@ -1,7 +1,6 @@
 package Main;
 
-public class Timer {
-    class Timer implements ActionListener {
+public class Timer implements ActionListener {
         public void actionPerformed(ActionEvent event) {
             if (startGame && !winner) {
                 bingoNumbers.generateNumber();
