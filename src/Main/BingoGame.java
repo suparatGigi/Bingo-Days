@@ -8,16 +8,18 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 public class BingoGame {
+    private MouseClickListener mouseListener;
+    private ActionListener timer;
+    private ActionListener buttonListener;
+    private final int DELAY;
 
-
-    public static final int WIDTH = ;
 
     public BingoGame(GameManager gm){
         createBingoButton();
 
         MouseClickListener mouseListener = new MouseClickListener();
-        Timer timer = new Timer();
-        int DELAY = 2500;
+        timer = (ActionListener) new Timer();
+        DELAY = 2500;
         Timer t = new Timer(DELAY, timer);
         t.start();
 
@@ -50,4 +52,4 @@ public class BingoGame {
 
 
 
->>>>>>> d2fb25518a54cddbdf5a16bf03af4ab6f82c3f1d
+\
