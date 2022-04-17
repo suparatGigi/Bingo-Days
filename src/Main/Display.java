@@ -136,7 +136,7 @@ public class Display {
             }
         });
        
-       createNextButton(3, 560, 580, 200, 67, "continueButton.png", "goScreen4");
+       createNextButton(3, 560, 580, 200, 67, "image/continueButton.png", "goScreen4");
     }
     
     public void generateScreen(){
