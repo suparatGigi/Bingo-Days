@@ -191,13 +191,9 @@ public class Display {
         createNextButton(7, 1180, 4, 90, 88, "image/Xbutton.png", "goScreen1");
         //createNextButton(7, 60, 610, 200, 89, "image/bingoButton.png", "goScreen5");
         BingoGame game = new BingoGame();
-        gPanel[7].add(daysGrid);
-
-        add(bingoNumbers);
-        setVisible(true);
-
+        bgPanel[7].add(daysGrid);
+        bgPanel[7].add(bingoNumbers);
         daysGrid.addMouseListener(mouseListener);
-        setVisible(true);
         bgPanel[7].add(bgLabel[7]);
         
         //SCREEN8 tue box about ball left and sccore will you get

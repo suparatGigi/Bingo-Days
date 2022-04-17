@@ -11,7 +11,7 @@ import javax.swing.JButton;
 public class BingoGame {
     private BingoNumbers bingoNumbers;
     private BingoGrid dummyGrid;
-    private BingoGridDays daysGrid;
+    public BingoGridDays daysGrid;
 
     private MouseListener mouseListener;
     private ActionListener timer;
