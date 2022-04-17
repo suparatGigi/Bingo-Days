@@ -1,5 +1,7 @@
 package Main;
 
+import java.awt.*;
+
 public class BingoGridDays extends BingoGrid {
     public BingoGridDays() {
         super();
