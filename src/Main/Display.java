@@ -113,7 +113,7 @@ public class Display {
  	
     }
     
-    public void createInputNameFrame(int bgNum){
+    public void createInputNameScreen(int bgNum){
 
         JTextField txtName = new JTextField("Enter your name");
         txtName.setSelectedTextColor(Color.black);
@@ -137,7 +137,7 @@ public class Display {
             }
         });
        
-       createNextButton(3, 560, 580, 200, 67, "continueButton.png", "goScreen4");
+       createNextButton(3, 560, 580, 200, 67, "image/continueButton.png", "goScreen4");
     }
     
     public void generateScreen(){

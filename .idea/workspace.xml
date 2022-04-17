@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bbc5080-2b9a-47a2-9ecf-fcc1585db37d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/BingoGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/BingoGrid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/BingoGridDays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/MouseClickListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/ActionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/ActionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GameManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -17,18 +31,22 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="27us4Q98aklu7jHfOFpYlTEDdQA" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/matcy/Desktop/fresher/Prog Tech Lab/Bingo-Days (ver. github) "
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/matcy/Desktop/fresher/Prog Tech Lab/Bingo-Days (ver. github) &quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="GameManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.GameManager" />
@@ -45,7 +63,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GameManager" />
+        <item itemvalue="Application.Main.GameManager" />
       </list>
     </recent_temporary>
   </component>
@@ -57,11 +75,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650182487721</updated>
-      <workItem from="1650182496117" duration="224000" />
+      <workItem from="1650182496117" duration="4906000" />
+      <workItem from="1650193449073" duration="1525000" />
+      <workItem from="1650195495639" duration="2029000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
