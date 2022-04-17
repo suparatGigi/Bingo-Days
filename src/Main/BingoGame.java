@@ -1,5 +1,6 @@
 package Main;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,9 +13,9 @@ public class BingoGame {
     public BingoGame(GameManager gm){
         createBingoButton();
 
-        mouseListener = new MouseClickListener();
-        timer = new MyTimer();
-        DELAY = 2500;
+        MouseClickListener mouseListener = new MouseClickListener();
+        Timer timer = new Timer();
+        int DELAY = 2500;
         Timer t = new Timer(DELAY, timer);
         t.start();
 
@@ -47,3 +48,4 @@ public class BingoGame {
 
 
 
+>>>>>>> d2fb25518a54cddbdf5a16bf03af4ab6f82c3f1d
