@@ -23,19 +23,6 @@ public class ActionHandler implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String choice = e.getActionCommand();
-        Object source = e.getSource();
-        if (source == bingo) { //checks if the human grid has won
-            if (!winner) {
-                if (daysGrid.checkWin()) {
-                    daysGrid.setWinnerMessage("BINGO");
-                    winner = true;
-                } else {
-                    daysGrid.setWinnerMessage("Sorry, you haven't gotten bingo.");
-                }
-            }
-            daysGrid.repaint();
-            bingoNumbers.repaint();
-
         //เปลี่ยนหน้า
         switch(choice){
             case "goScreen1" : gm.sChanger.showScreen1(); break;

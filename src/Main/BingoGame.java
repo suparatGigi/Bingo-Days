@@ -2,9 +2,10 @@ package Main;
 
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import javax.swing.JButton;
 
 public class BingoGame {
@@ -12,7 +13,7 @@ public class BingoGame {
     private BingoGrid dummyGrid;
     private BingoGridDays daysGrid;
 
-    private MouseClickListener mouseListener;
+    private MouseListener mouseListener;
     private ActionListener timer;
     private ActionListener buttonListener;
     private final int DELAY;
@@ -20,10 +21,10 @@ public class BingoGame {
     private boolean winner = false;
 
 
-    public BingoGame(GameManager gm) {
+    public BingoGame() {
         createBingoButton();
 
-        MouseClickListener mouseListener = new MouseClickListener();
+        mouseListener = new MouseListener();
         timer = (ActionListener) new Timer();
         DELAY = 2500;
         Timer t = new Timer(DELAY, timer);
@@ -80,9 +81,27 @@ public class BingoGame {
                         daysGrid.setWinnerMessage("Sorry, you haven't gotten bingo.");
                     }
                 }
+            }
         }
     }
+    class MouseClickListener implements MouseListener {
+        @Override
+        public void mouseClicked(MouseEvent e) {}
+        @Override
+        public void mousePressed(MouseEvent e) {
+            int x = e.getX();
+            int y = e.getY();
+            daysGrid.highlightSquare(x, y);
+        }
+        @Override
+        public void mouseReleased(MouseEvent e) {}
+        @Override
+        public void mouseEntered(MouseEvent e) {}
+        @Override
+        public void mouseExited(MouseEvent e) {}
 
+        }
+    }
 
 
 
