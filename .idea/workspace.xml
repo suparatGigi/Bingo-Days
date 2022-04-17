@@ -14,16 +14,14 @@
       <change beforePath="$PROJECT_DIR$/src/Main/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Sound.java" afterDir="false" />
 =======
     <list default="true" id="1bbc5080-2b9a-47a2-9ecf-fcc1585db37d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/BingoGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/BingoGrid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/BingoGridDays.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/MouseClickListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/ActionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/ActionHandler.java" afterDir="false" />
+<<<<<<< HEAD
+=======
       <change beforePath="$PROJECT_DIR$/src/Main/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Display.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GameManager.java" afterDir="false" />
 >>>>>>> d2fb25518a54cddbdf5a16bf03af4ab6f82c3f1d
+>>>>>>> bd1c6919bdcde889345d08c6898062ccd8a7a31a
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,11 +80,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main.GameManager" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -107,8 +100,15 @@
       <updated>1650182487721</updated>
       <workItem from="1650182496117" duration="4906000" />
       <workItem from="1650193449073" duration="1525000" />
+<<<<<<< HEAD
+      <workItem from="1650195495639" duration="3136000" />
+      <workItem from="1650198663938" duration="8000" />
+      <workItem from="1650198692046" duration="12000" />
+      <workItem from="1650198771504" duration="13000" />
+=======
       <workItem from="1650195495639" duration="2029000" />
 >>>>>>> d2fb25518a54cddbdf5a16bf03af4ab6f82c3f1d
+>>>>>>> bd1c6919bdcde889345d08c6898062ccd8a7a31a
     </task>
     <servers />
   </component>

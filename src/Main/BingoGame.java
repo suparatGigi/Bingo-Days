@@ -1,6 +1,5 @@
 package Main;
-<<<<<<< HEAD
-=======
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,9 +15,9 @@ public class BingoGame {
     public BingoGame(GameManager gm){
         createBingoButton();
 
-        mouseListener = new MouseClickListener();
-        timer = new MyTimer();
-        DELAY = 2500;
+        MouseClickListener mouseListener = new MouseClickListener();
+        Timer timer = new Timer();
+        int DELAY = 2500;
         Timer t = new Timer(DELAY, timer);
         t.start();
 
