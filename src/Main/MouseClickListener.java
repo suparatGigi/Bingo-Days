@@ -13,7 +13,8 @@ public class MouseClickListener implements MouseListener {
     public void mousePressed(MouseEvent e) {
         int x = e.getX();
         int y = e.getY();
-        humanGrid.highlightSquare(x, y);
+        BingoGridDays daysGrid;
+        daysGrid.highlightSquare(x, y);
     }
 
     @Override

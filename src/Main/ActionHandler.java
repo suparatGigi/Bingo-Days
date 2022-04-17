@@ -26,14 +26,14 @@ public class ActionHandler implements ActionListener {
         Object source = e.getSource();
         if (source == bingo) { //checks if the human grid has won
             if (!winner) {
-                if (humanGrid.checkWin()) {
-                    humanGrid.setWinnerMessage("BINGO");
+                if (daysGrid.checkWin()) {
+                    daysGrid.setWinnerMessage("BINGO");
                     winner = true;
                 } else {
-                    humanGrid.setWinnerMessage("Sorry, you haven't gotten bingo.");
+                    daysGrid.setWinnerMessage("Sorry, you haven't gotten bingo.");
                 }
             }
-            humanGrid.repaint();
+            daysGrid.repaint();
             bingoNumbers.repaint();
 
         //เปลี่ยนหน้า

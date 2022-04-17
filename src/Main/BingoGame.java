@@ -11,6 +11,8 @@ import javax.swing.JButton;
 public class BingoGame {
 
 
+    public static final int WIDTH = ;
+
     public BingoGame(GameManager gm){
         createBingoButton();
 
