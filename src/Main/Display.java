@@ -41,6 +41,7 @@ public class Display {
         
     }
 
+    
     public void createMainField(){
         window = new JFrame();
         window.setSize(1295, 715); //ขนาดหน้าต่าง
