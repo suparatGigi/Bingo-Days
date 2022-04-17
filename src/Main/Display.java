@@ -41,6 +41,7 @@ public class Display {
         
     }
 
+    
     public void createMainField(){
         window = new JFrame();
         window.setSize(1295, 715); //ขนาดหน้าต่าง
@@ -112,7 +113,7 @@ public class Display {
  	
     }
     
-    public void createInputNameFrame(int bgNum){
+    public void createInputNameScreen(int bgNum){
 
         JTextField txtName = new JTextField("Enter your name");
         txtName.setSelectedTextColor(Color.black);

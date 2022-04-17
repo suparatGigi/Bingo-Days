@@ -15,7 +15,7 @@ import java.net.URL;
  */
 public class GameManager {
     
-     ActionHandler aHandler = new ActionHandler(this);
+    public ActionHandler aHandler = new ActionHandler(this);
     
     public Display dp = new Display(this);
     
