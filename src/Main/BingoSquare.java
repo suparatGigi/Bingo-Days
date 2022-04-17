@@ -17,7 +17,6 @@ public class BingoSquare extends Rectangle {
     /**
      * Constructor for BingoSquare
      * Contraints of the number of the square is determined by its column location
-     * @param col the column of the square
      */
     public BingoSquare(int x1, int y1, int width, int height) {
         super(x1, y1, width, height);
