@@ -1,26 +1,12 @@
 package Event;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import Main.BingoGame;
 
-public class ButtonListener implements ActionListener {
-    BingoGame bingo;
-    public ButtonListener(BingoGame bingo){
-        this.bingo = bingo;
+public class ButtonListener {
+
+    private BingoGame bingoGame;
+    public ButtonListener(BingoGame bingoGame) {
+        this.bingoGame = bingoGame;
     }
-    @Override
-    public void actionPerformed(ActionEvent event) {
-        Object source = event.getSource();
-        // check if bingo win
-        if (source == bingo) {
-            if(!winner) {
-                if(daysGrid.checkwin()){
-                    daysGrid.setWinnerMessage("BINGO"); ///แก้
-                    winner = true;
-                } else {
-                    daysGrid.setWinnerMessage("END OF ROUND"); ///แก้
-                }
-            }
-        }
-    }
+
 }
