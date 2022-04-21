@@ -3,22 +3,23 @@ package Main;
 
 import javax.swing.*;
 import java.awt.*;
-import javax.swing.Timer;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JButton;
+import Event.ButtonListener;
+import Event.MouseClickListener;
+import Event.TimerHandler;
 
 public class BingoGame {
     public static final int WIDTH = 900;
     public static final int LENGTH = 700;
 
-    public MouseListener mouse = new MouseListener(this);
-    public ButtonListener mouse = new BottonListener(this);
-    public Timer mouse = new Timer(this);
+    public MouseClickListener mouse = new MouseClickListener;
+    public ButtonListener button = new ButtonListener(this);
+    public TimerHandler timer = new TimerHandler(this);
 
-    aHandler = new ActionHandler(this)
     private BingoNumbers bingoNumbers;
     private BingoGrid dummyGrid;
     public BingoGridDays daysGrid;
@@ -28,7 +29,7 @@ public class BingoGame {
     private ActionListener buttonListener;
     private final int DELAY;
     private boolean startGame = true;
-    private boolean winner = false;
+    public boolean winner = false;
 
     private JLabel countDownLabel = new JLabel("", SwingConstants.CENTER);
     private CardLayout cardLayout = new CardLayout();
