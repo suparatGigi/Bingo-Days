@@ -1,5 +1,7 @@
 package Main;
 
+import javax.swing.JComponent;
+
 import java.awt.*;
 import java.awt.Graphics;
 import java.awt.Graphics2D;

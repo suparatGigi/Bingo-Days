@@ -14,9 +14,8 @@ import Event.MouseClickListener;
 import Event.TimerHandler;
 
 public class BingoGame {
-    public static final int WIDTH = 900;
-    public static final int LENGTH = 700;
 
+<<<<<<< Updated upstream
     public MouseClickListener mouse = new MouseClickListener;
     public ButtonListener button = new ButtonListener(this);
     public TimerHandler timeHandle = new TimerHandler(this);
@@ -29,6 +28,17 @@ public class BingoGame {
     private ActionListener timer;
     private ActionListener buttonListener;
     private int DELAY;
+=======
+    public MouseListener mouseListener;
+    public ActionListener buttonListener ;
+    public ActionListener timer;
+    public BingoNumbers bingoNumbers;
+    public BingoGrid Grid;
+    public BingoGridDays daysGrid;
+
+
+    private final int DELAY;
+>>>>>>> Stashed changes
     public boolean startGame = true;
     public boolean winner = false;
 
@@ -36,13 +46,42 @@ public class BingoGame {
     public BingoGame(int bgNum, String bgFileName) {
 
         createBingoBackgroud(bgNum, bgFileName);
+<<<<<<< Updated upstream
         createBingoButton(bgNum);
 
 
         ActionListener timer = new Timer();
         DELAY = 3500;
+=======
+
+        JButton start = new JButton();
+        Main.Display.bgPanel[bgNum].add(start);
+        start.addActionListener(bingoGame.buttonListener);
+
+        //create bingo button
+        JButton bingoButton = new JButton();
+        bingoButton.setBounds(500, 600, 200, 89);
+        bingoButton.setBackground(null);
+        bingoButton.setContentAreaFilled(false);
+        bingoButton.setFocusPainted(false);
+        bingoButton.setBorderPainted(false);
+        bingoButton.setToolTipText("I HAVE BINGO");
+
+        ImageIcon buttonIcon = new ImageIcon(getClass().getClassLoader().getResource("image/bingoButton.png")); // เพิ่มรูปปุ่ม
+        bingoButton.setIcon(buttonIcon);
+        buttonListener = (ActionListener) new ButtonListener(this);
+        bingoButton.addActionListener(buttonListener);
+        Main.Display.bgPanel[bgNum].add(bingoButton);
+
+        mouseListener = new MouseClickListener(this);
+        timer = new TimerHandler(this);
+        DELAY = 2500;
+>>>>>>> Stashed changes
         Timer t = new Timer(DELAY, timer);
         t.start();
+
+        daysGrid = new BingoGridDays();
+        bingoNumbers = new BingoNumbers();
 
         Main.Display.bgPanel[bgNum].add(daysGrid);
         Main.Display.bgPanel[bgNum].setVisible(true);
@@ -50,7 +89,7 @@ public class BingoGame {
         Main.Display.bgPanel[bgNum].add(bingoNumbers);
         Main.Display.bgPanel[bgNum].setVisible(true);
 
-        daysGrid.addMouseListener(bingo.mouse);
+        daysGrid.addMouseListener(mouseListener);
         Main.Display.bgPanel[bgNum].setVisible(true);
 
 
@@ -81,8 +120,7 @@ public class BingoGame {
         ImageIcon buttonIcon = new ImageIcon(getClass().getClassLoader().getResource("image/bingoButton.png")); // เพิ่มรูปปุ่ม
         bingoButton.setIcon(buttonIcon);
 
-        buttonListener = new Event.ButtonListener();
-        bingoButton.addActionListener(buttonListener);
+
 
         Main.Display.bgPanel[bgNum].add(bingoButton);
     }
