@@ -4,7 +4,14 @@
  */
 package Main;
 
+<<<<<<< Updated upstream
 //import java.net.URL;
+=======
+import Event.ActionHandler;
+import Event.ScreenChanger;
+import Sound.Music;
+import Sound.Sound;
+>>>>>>> Stashed changes
 
 import java.net.URL;
 
@@ -14,8 +21,13 @@ import java.net.URL;
  * 
  */
 public class GameManager {
+<<<<<<< Updated upstream
     
      ActionHandler aHandler = new ActionHandler(this);
+=======
+
+    public ActionHandler aHandler = new ActionHandler(this);
+>>>>>>> Stashed changes
     
     public Display dp = new Display(this);
     
