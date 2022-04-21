@@ -14,21 +14,21 @@ public class ButtonListener {
     public void actionPerformed(ActionEvent event) {
         Object source = event.getSource();
         if (source == reset) {
-            daysGrid.initializeGrid();
-            bingoNumbers.number.clear();
-            winner = false;
+            bingoGame.daysGrid.initializeGrid();
+            bingoGame.bingoNumbers.numbers.clear();
+            bingoGame.winner = false;
         } else if (source == bingo) { //checks if the human grid has won
-            if (!winner) {
-                if (humanGrid.checkWin()) {
-                    humanGrid.setWinnerMessage("WINNER: HUMAN");
-                    winner = true;
+            if (!bingoGame.winner) {
+                if (bingoGame.daysGrid.checkWin()) {
+                    bingoGame.daysGrid.setWinnerMessage("WINNER: HUMAN");
+                    bingoGame.winner = true;
                 } else {
-                    humanGrid.setWinnerMessage("Sorry, you haven't gotten bingo.");
+                    bingoGame.daysGrid.setWinnerMessage("Sorry, you haven't gotten bingo.");
                 }
             }
         }//  else if (source == start) { //starts the game
         // startGame = true; }
-        daysGrid.repaint();
+        bingoGame.daysGrid.repaint();
         bingoGame.bingoNumbers.repaint();
         //layout.repaint();
     }

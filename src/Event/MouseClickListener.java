@@ -7,10 +7,10 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class MouseClickListener implements MouseListener {
-    BingoGame bingo;
+    BingoGame bingoGame;
 
-    public MouseClickListener(BingoGame bingo){
-        this.bingo = bingo;
+    public MouseClickListener(BingoGame bingoGame){
+        this.bingoGame = bingoGame;
     }
     @Override
     public void mousePressed(MouseEvent event){
