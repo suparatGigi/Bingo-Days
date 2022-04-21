@@ -28,7 +28,7 @@ public class BingoGame {
     private MouseListener mouseListener;
     private ActionListener timer;
     private ActionListener buttonListener;
-    private final int DELAY;
+    private int DELAY;
     private boolean startGame = true;
     public boolean winner = false;
 
@@ -39,7 +39,7 @@ public class BingoGame {
         createBingoButton(bgNum);
 
 
-        timer = new Timer();
+        ActionListener timer = new Timer();
         DELAY = 2500;
         Timer t = new Timer(DELAY, timer);
         t.start();
