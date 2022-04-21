@@ -21,26 +21,26 @@ public class BingoGame {
     public ButtonListener button = new ButtonListener(this);
     public TimerHandler timeHandle = new TimerHandler(this);
 
-    private BingoNumbers bingoNumbers;
-    private BingoGrid dummyGrid;
+    public BingoNumbers bingoNumbers;
+    public BingoGrid dummyGrid;
     public BingoGridDays daysGrid;
 
     private MouseListener mouseListener;
     private ActionListener timer;
     private ActionListener buttonListener;
     private int DELAY;
-    private boolean startGame = true;
+    public boolean startGame = true;
     public boolean winner = false;
 
 
     public BingoGame(int bgNum, String bgFileName) {
 
-        createBingoBackgroud(bgNum, bgFileName)
+        createBingoBackgroud(bgNum, bgFileName);
         createBingoButton(bgNum);
 
 
         ActionListener timer = new Timer();
-        DELAY = 2500;
+        DELAY = 3500;
         Timer t = new Timer(DELAY, timer);
         t.start();
 

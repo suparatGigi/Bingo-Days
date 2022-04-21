@@ -6,7 +6,7 @@ import java.util.ArrayList;
  *  A bingo board
  */
 public class BingoGrid {
-    protected BingoSquare[][] grid;
+    public BingoSquare[][] grid;
     protected ArrayList<Integer> bingoGridNumbers;
     protected final int SQUARE_SIZE = 60;
     protected final int LENGTH = 4;
