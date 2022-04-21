@@ -4,6 +4,11 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class MouseClickListener implements MouseListener {
+    BingoGame bingo;
+
+    public MouseClickListener(BingoGame bingo){
+        this.bingo = bing0;
+    }
     @Override
     public void mousePressed(MouseEvent event){
         int x = event.getX();

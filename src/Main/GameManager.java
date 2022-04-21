@@ -24,7 +24,7 @@ public class GameManager {
 <<<<<<< Updated upstream
     
      ActionHandler aHandler = new ActionHandler(this);
-=======
+
 
     public ActionHandler aHandler = new ActionHandler(this);
 >>>>>>> Stashed changes

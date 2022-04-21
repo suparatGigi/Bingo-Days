@@ -4,6 +4,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ButtonListener implements ActionListener {
+    BingoGame bingo;
+    public ButtonListener(BingoGame bingo){
+        this.bingo = bingo;
+    }
     @Override
     public void actionPerformed(ActionEvent event) {
         Object source = event.getSource();

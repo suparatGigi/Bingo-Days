@@ -14,6 +14,11 @@ public class BingoGame {
     public static final int WIDTH = 900;
     public static final int LENGTH = 700;
 
+    public MouseListener mouse = new MouseListener(this);
+    public ButtonListener mouse = new BottonListener(this);
+    public Timer mouse = new Timer(this);
+
+    aHandler = new ActionHandler(this)
     private BingoNumbers bingoNumbers;
     private BingoGrid dummyGrid;
     public BingoGridDays daysGrid;
@@ -46,7 +51,7 @@ public class BingoGame {
         Main.Display.bgPanel[bgNum].add(bingoNumbers);
         Main.Display.bgPanel[bgNum].setVisible(true);
 
-        daysGrid.addMouseListener(mouseListener);
+        daysGrid.addMouseListener(bingo.mouse);
         Main.Display.bgPanel[bgNum].setVisible(true);
 
 

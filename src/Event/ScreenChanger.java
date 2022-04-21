@@ -11,7 +11,6 @@ import Main.GameManager;
  * 
  */
 public class ScreenChanger {
-    
     GameManager gm;
     
     public ScreenChanger(GameManager gm){

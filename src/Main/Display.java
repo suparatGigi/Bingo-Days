@@ -23,7 +23,6 @@ import javax.swing.JToolTip;
  *
  *
  */
-
 public class Display {
     
     String day;
