@@ -13,12 +13,6 @@ import java.net.URL;
 
 public class Sound {
     Clip clip;
-    //URL soundURL[] = new URL[51]; 
-    
-    //public Sound() {
-       // soundURL[0] = getClass().getResource("C:\\Users\\gigi\\Downloads\\Bingo Days\\Bingo Days\\src\\audio\\sound_1.wav");
-        
-    //}
     
     public void setFile(URL name) {
         try {

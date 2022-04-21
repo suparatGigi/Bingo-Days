@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 public class ActionHandler implements ActionListener {
     
     GameManager gm;
+    private boolean winner = false;
     
     public ActionHandler(GameManager gm){
         this.gm = gm;
@@ -26,7 +27,6 @@ public class ActionHandler implements ActionListener {
         String choice = e.getActionCommand();
         //เปลี่ยนหน้า
         switch(choice){
-
             case "goScreen1" : gm.sChanger.showScreen1(); break;
             case "goScreen2" : gm.sChanger.showScreen2(); break;
             case "goScreen3" : gm.sChanger.showScreen3(); break;
@@ -40,9 +40,11 @@ public class ActionHandler implements ActionListener {
             case "goScreen11" : gm.sChanger.showScreen11(); break;
             case "goScreen12" : gm.sChanger.showScreen12(); break;
             case "goScreen13" : gm.sChanger.showScreen13(); break;   
-            
-            
+
         }
+
+
+
 
         
         
