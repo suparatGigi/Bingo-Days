@@ -2,6 +2,7 @@ package Main;
 
 
 import javax.swing.*;
+import javax.swing.Timer;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,31 +19,28 @@ public class BingoGame {
 
     public MouseClickListener mouse = new MouseClickListener;
     public ButtonListener button = new ButtonListener(this);
-    public TimerHandler timer = new TimerHandler(this);
+    public TimerHandler timeHandle = new TimerHandler(this);
 
-    private BingoNumbers bingoNumbers;
-    private BingoGrid dummyGrid;
+    public BingoNumbers bingoNumbers;
+    public BingoGrid dummyGrid;
     public BingoGridDays daysGrid;
 
     private MouseListener mouseListener;
     private ActionListener timer;
     private ActionListener buttonListener;
-    private final int DELAY;
-    private boolean startGame = true;
+    private int DELAY;
+    public boolean startGame = true;
     public boolean winner = false;
-
-    private JLabel countDownLabel = new JLabel("", SwingConstants.CENTER);
-    private CardLayout cardLayout = new CardLayout();
 
 
     public BingoGame(int bgNum, String bgFileName) {
 
-        createBingoBackgroud(bgNum, bgFileName)
+        createBingoBackgroud(bgNum, bgFileName);
         createBingoButton(bgNum);
 
-        mouseListener = new Event.MouseClickListener();
-        timer = new Timer();
-        DELAY = 2500;
+
+        ActionListener timer = new Timer();
+        DELAY = 3500;
         Timer t = new Timer(DELAY, timer);
         t.start();
 
