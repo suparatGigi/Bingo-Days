@@ -4,7 +4,10 @@
  */
 package Main;
 
-import java.net.URL;
+import Event.ActionHandler;
+import Event.ScreenChanger;
+import Sound.Music;
+import Sound.Sound;
 
 import java.net.URL;
 
@@ -14,8 +17,11 @@ import java.net.URL;
  * 
  */
 public class GameManager {
-    
+     ActionHandler aHandler = new ActionHandler(this);
+
+
     public ActionHandler aHandler = new ActionHandler(this);
+
     
     public Display dp = new Display(this);
     

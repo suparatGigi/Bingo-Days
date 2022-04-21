@@ -17,19 +17,19 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.JToolTip;
 
 /**
  *
  *
  */
-
 public class Display {
     
     String day;
     GameManager gm;
-    JFrame window;
-    public JPanel bgPanel[] = new JPanel[20]; //window 19 หน้า
-    public JLabel bgLabel[] = new JLabel[20];
+    public static JFrame window;
+    public static JPanel bgPanel[] = new JPanel[20]; //window 19 หน้า
+    public static JLabel bgLabel[] = new JLabel[20];
     
     public Display(GameManager gm){
         this.gm = gm;
@@ -74,20 +74,21 @@ public class Display {
     }
     
     public void createNextButton(int bgNum, int x, int y, int width, int height, String buttonName, String command){
-        JButton button = new JButton();
-        button.setBounds(x, y, width, height);
-        button.setBackground(null);
-        button.setContentAreaFilled(false);
-        button.setFocusPainted(false);
-        button.setBorderPainted(false);
+        JButton nextButton = new JButton();
+        nextButton.setBounds(x, y, width, height);
+        nextButton.setBackground(null);
+        nextButton.setContentAreaFilled(false);
+        nextButton.setFocusPainted(false);
+        nextButton.setBorderPainted(false);
+        nextButton.setToolTipText("NEXT");
         
         ImageIcon buttonIcon = new ImageIcon(getClass().getClassLoader().getResource(buttonName)); // เพิ่มรูปปุ่ม
-        button.setIcon(buttonIcon);
+        nextButton.setIcon(buttonIcon);
+
+        nextButton.addActionListener(gm.aHandler);
+        nextButton.setActionCommand(command);
         
-        button.addActionListener(gm.aHandler);
-        button.setActionCommand(command);
-        
-        bgPanel[bgNum].add(button);
+        bgPanel[bgNum].add(nextButton);
     }
     
     public void createXbutton(int bgNum, int x, int y, int width, int height, String buttonName){
@@ -97,6 +98,8 @@ public class Display {
         Xbutton.setContentAreaFilled(false);
         Xbutton.setFocusPainted(false);
         Xbutton.setBorderPainted(false);
+
+        Xbutton.setToolTipText("CLOSE");
         
         ImageIcon buttonIcon = new ImageIcon(getClass().getClassLoader().getResource(buttonName)); // เพิ่มรูปปุ่ม
         Xbutton.setIcon(buttonIcon);
@@ -112,6 +115,29 @@ public class Display {
 	bgPanel[bgNum].add(Xbutton);
  	
     }
+
+    public void createPlayButton(int bgNum, int x, int y, int width, int height, String buttonName){
+        JButton playButton = new JButton();
+        playButton.setBounds(x, y, width, height);
+        playButton.setBackground(null);
+        playButton.setContentAreaFilled(false);
+        playButton.setFocusPainted(false);
+        playButton.setBorderPainted(false);
+
+        playButton.setToolTipText("PLAY");
+
+        ImageIcon buttonIcon = new ImageIcon(getClass().getClassLoader().getResource(buttonName)); // เพิ่มรูปปุ่ม
+        playButton.setIcon(buttonIcon);
+
+        playButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                bgPanel[8].setVisible(true);
+            }
+        });
+       bgPanel[bgNum].add(playButton);
+    }
+
     
     public void createInputNameScreen(int bgNum){
 
@@ -190,18 +216,20 @@ public class Display {
         createNextButton(7, 1090, 3, 90, 88, "image/rebutton.png", "goScreen3");
         createNextButton(7, 1180, 4, 90, 88, "image/Xbutton.png", "goScreen1");
         //createNextButton(7, 60, 610, 200, 89, "image/bingoButton.png", "goScreen5");
-        BingoGame game = new BingoGame();
-        bgPanel[7].add(daysGrid);
-        bgPanel[7].add(bingoNumbers);
-        daysGrid.addMouseListener(mouseListener);
         bgPanel[7].add(bgLabel[7]);
-        
+
+        //SCREEN8 START IN 3 SECOND
+        new CountDownScreen(8, 7, "image/grey1.png");
+        bgPanel[8].add(bgLabel[8]);
+        /*
         //SCREEN8 tue box about ball left and sccore will you get
         createBackground(8, "image/d2.png");
         createNextButton(8, 1090, 3, 90, 88, "image/rebutton.png", "goScreen3");
         createNextButton(8, 1180, 4, 90, 88, "image/Xbutton.png", "goScreen1");
         createNextButton(8, 60, 610, 200, 89, "image/bingoButton.png", "goScreen5");
         bgPanel[8].add(bgLabel[8]);
+        */
+
         
         //SCREEN9 wed box about ball left and sccore will you get
         createBackground(9, "image/d3.png");

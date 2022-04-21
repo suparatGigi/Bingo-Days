@@ -1,6 +1,11 @@
 package Main;
 
 import java.awt.*;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Font;
+import java.util.ArrayList;
+
 
 public class BingoGridDays extends BingoGrid {
     public BingoGridDays() {
@@ -88,7 +93,7 @@ public class BingoGridDays extends BingoGrid {
                     g2.setColor(Color.BLACK);
                     g2.draw(square);
                 }
-
+////แก้เป็นสุ่ม free
                 //the middle space is a freebie
                 if (row == 2 && col == 2) {}
                 else {
@@ -101,21 +106,6 @@ public class BingoGridDays extends BingoGrid {
                         g2.drawString(value + "", xCoord, yCoord);
                 }
 
-                //prints the letters B I N G O above the board
-                if (row == 0) {
-                    g2.setFont(font2);
-                    g2.drawString(BINGO[col], (int)square.getX() + (SQUARE_SIZE / 6), (int)square.getY() - (SQUARE_SIZE / 4) );
-                    g2.setFont(font);
-                }
-
-                //writes "Human" below the board
-                if (row == grid.length - 1 && col == 1) {
-                    g2.setFont(font2);
-                    g2.setColor(Color.LIGHT_GRAY);
-                    g2.drawString("Human", (int)square.getX() + SQUARE_SIZE / 4 - 5, (int)square.getY() + SQUARE_SIZE + ((SQUARE_SIZE / 3) * 2));
-                    g2.setFont(font);
-                    g2.setColor(Color.BLACK);
-                }
             }
         }
 

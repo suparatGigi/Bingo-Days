@@ -11,7 +11,7 @@ public class BingoGrid {
     protected final int SQUARE_SIZE = 60;
     protected final int LENGTH = 4;
     protected final int WIDTH = 4;
-    //public static final String[] BINGO = {"D", "A", "Y", "S"};
+    public static final String[] BINGO = {"D", "A", "Y", "S"};
     public int indentX;
     public int indentY;
     protected String winnerMessage;
