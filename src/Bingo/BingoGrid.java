@@ -1,11 +1,12 @@
 package Bingo;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 /**
  *  A bingo board
  */
-public class BingoGrid {
+public class BingoGrid extends Component {
     public BingoSquare[][] grid;
     protected ArrayList<Integer> bingoGridNumbers;
     protected final int SQUARE_SIZE = 60;
