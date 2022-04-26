@@ -4,6 +4,8 @@
  */
 package Main;
 
+import Stage.Monday;
+
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -207,12 +209,14 @@ public class Display {
         createNextButton(6, 1090, 3, 90, 88, "image/rebutton.png", "goScreen7");  //teat
         bgPanel[6].add(bgLabel[6]);
         
-        //SCREEN7 mon box about ball left and sccore will you get
-        createBackground(7, "image/d11.png");
+        //SCREEN9 mon box about ball left and sccore will you get
+        Stage.Monday monday = new Monday(9,"image/d11.png");
+        //createBackground(7, "image/d11.png");
         createNextButton(7, 1090, 3, 90, 88, "image/rebutton.png", "goScreen3");
         createNextButton(7, 1180, 4, 90, 88, "image/Xbutton.png", "goScreen1");
         //createNextButton(7, 60, 610, 200, 89, "image/bingoButton.png", "goScreen5");
-        bgPanel[7].add(bgLabel[7]);
+        //bgPanel[9].add(monday);
+        //bgPanel[9].add(bgLabel[7]);
 
         //SCREEN8 START IN 3 SECOND
         new CountDownScreen(8, 7, "image/grey1.png");
