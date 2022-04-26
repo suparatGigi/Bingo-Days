@@ -24,8 +24,8 @@ public class GameManager {
     
     public ScreenChanger sChanger = new ScreenChanger(this);
     
-    Music music = new Music();
-    Sound sound = new Sound();
+    //Music music = new Music();
+    //Sound sound = new Sound();
     
     public URL fieldMusic = getClass().getClassLoader().getResource("audio//sound.wav");
     public URL currentMusic;
@@ -35,13 +35,13 @@ public class GameManager {
     }
     
     public GameManager() {
-        currentMusic = fieldMusic;
-        playMusic(currentMusic);
+        //currentMusic = fieldMusic;
+        //playMusic(currentMusic);
         
         sChanger.showScreen1();
         
     }
-    
+    /*
     public void playSound(URL url) {
         sound.setFile(url);
         sound.play(url);
@@ -56,7 +56,7 @@ public class GameManager {
     public void stopMusic(URL url) {
         music.stop(url);
     }
-
+*/
 
 }
 

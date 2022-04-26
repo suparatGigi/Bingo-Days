@@ -17,6 +17,7 @@ public class CountDownScreen extends Container {
         Display.bgPanel[startNum].setBounds(0, 0, 1310, 715);
         Display.bgPanel[startNum].setLayout(null);
         ImageIcon bgStartIcon = new ImageIcon(getClass().getClassLoader().getResource(bgFileName)); // เพิ่มBackground
+        Display.bgLabel[startNum] = new JLabel();
         Display.bgLabel[startNum].setIcon(bgStartIcon);
         Display.window.add(Display.bgPanel[startNum]);
 

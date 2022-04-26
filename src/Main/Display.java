@@ -4,6 +4,8 @@
  */
 package Main;
 
+import Bingo.BingoGame;
+import Event.ButtonListener;
 import Stage.Monday;
 
 import java.awt.Color;
@@ -28,6 +30,8 @@ public class Display {
     public static JFrame window;
     public static JPanel bgPanel[] = new JPanel[20]; //window 19 หน้า
     public static JLabel bgLabel[] = new JLabel[20];
+
+    private ActionListener buttonListener;
     
     public Display(GameManager gm){
         this.gm = gm;
@@ -136,7 +140,6 @@ public class Display {
        bgPanel[bgNum].add(playButton);
     }
 
-    
     public void createInputNameScreen(int bgNum){
 
         JTextField txtName = new JTextField("Enter your name");
@@ -165,13 +168,17 @@ public class Display {
     }
     
     public void generateScreen(){
+
         //SCREEN1 logo game + start + howTOplay
         createBackground(1, "image/Bg1.png");
         createNextButton(1, 550, 450, 200, 89, "image/startButton.png", "goScreen3");
         createNextButton(1, 480, 560, 350, 87, "image/howTOplaybutton.png", "goScreen2");
         createNextButton(1, 1180, 4, 90, 88, "image/Xbutton.png", "goScreen1");
         bgPanel[1].add(bgLabel[1]);
-       
+
+
+
+
         //SCREEN2 howTOwin
         createBackground(2, "image/Bg2.png");
         //createNextButton(2, 560, 580, 200, 67, "continueButton.png", "goScreen3");
@@ -210,13 +217,13 @@ public class Display {
         bgPanel[6].add(bgLabel[6]);
         
         //SCREEN9 mon box about ball left and sccore will you get
-        Stage.Monday monday = new Monday(9,"image/d11.png");
-        //createBackground(7, "image/d11.png");
+        //Stage.Monday monday = new Monday(9,"image/d11.png");
+        createBackground(7, "image/d11.png");
         createNextButton(7, 1090, 3, 90, 88, "image/rebutton.png", "goScreen3");
         createNextButton(7, 1180, 4, 90, 88, "image/Xbutton.png", "goScreen1");
         //createNextButton(7, 60, 610, 200, 89, "image/bingoButton.png", "goScreen5");
         //bgPanel[9].add(monday);
-        //bgPanel[9].add(bgLabel[7]);
+        bgPanel[7].add(bgLabel[7]);
 
         //SCREEN8 START IN 3 SECOND
         new CountDownScreen(8, 7, "image/grey1.png");

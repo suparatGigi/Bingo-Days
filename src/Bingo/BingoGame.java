@@ -33,7 +33,22 @@ public class BingoGame {
 
     public BingoGame(int bgNum, String bgFileName) {
         //create background
-        createBingoBackgroud(bgNum, bgFileName);
+        createBingoBackgroud(9, "image/d11.png");
+        /*
+        Main.Display.bgPanel[bgNum] = new JPanel();
+        Main.Display.bgPanel[bgNum].setBounds(0, 0, 1310, 715); //ขนาดรูป
+        Main.Display.bgPanel[bgNum].setBackground(Color.black);
+        Main.Display.bgPanel[bgNum].setLayout(null);
+        Main.Display.window.add(Display.bgPanel[bgNum]);
+
+        Display.bgLabel[bgNum] = new JLabel();
+        Display.bgLabel[bgNum].setBounds(0, 0, 1310, 715);
+
+        ImageIcon bgIcon = new ImageIcon(getClass().getClassLoader().getResource(bgFileName)); // เพิ่มBackground
+        Display.bgLabel[bgNum].setIcon(bgIcon);
+        //bgPanel[bgNum].add(bgLabel[1]);
+
+         */
 
         //create bingo button
         JButton bingoButton = new JButton();
