@@ -1,11 +1,11 @@
-package Main;
+package Bingo;
 
 import java.util.Random;
 import java.util.ArrayList;
 import javax.swing.*;
 
 import java.awt.*;
-import java.awt.event.*;
+
 
 public class BingoNumbers  extends JComponent {
     public static ArrayList <Integer> numbers = new ArrayList<Integer>();

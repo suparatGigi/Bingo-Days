@@ -1,6 +1,6 @@
 package Event;
 
-import Main.BingoGame;
+import Bingo.BingoGame;
 
 
 import java.awt.event.ActionEvent;
@@ -12,6 +12,7 @@ public class TimerHandler implements ActionListener {
     public TimerHandler(BingoGame bingoGame){
         this.bingoGame = bingoGame;
     }
+
     @Override
     public void actionPerformed(ActionEvent event) {
         if (bingoGame.startGame && !bingoGame.winner){
@@ -19,7 +20,6 @@ public class TimerHandler implements ActionListener {
             bingoGame.daysGrid.isCalled();
             bingoGame.daysGrid.setWinnerMessage(""); /// มาเปลี่ยนที่หลัง
             bingoGame.bingoNumbers.repaint();
-
         }
     }
 }

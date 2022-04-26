@@ -1,62 +1,42 @@
-package Main;
-
+package Bingo;
 
 import javax.swing.*;
 import javax.swing.Timer;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import Event.ButtonListener;
 import Event.MouseClickListener;
 import Event.TimerHandler;
+import Main.Display;
 
 public class BingoGame {
+    public static final int WIDTH = 900;
+    public static final int LENGTH = 700;
 
-<<<<<<< Updated upstream
-    public MouseClickListener mouse = new MouseClickListener;
-    public ButtonListener button = new ButtonListener(this);
-    public TimerHandler timeHandle = new TimerHandler(this);
+    //public MouseClickListener mouse = new MouseClickListener;
+    //public ButtonListener button = new ButtonListener(this);
+    //public TimerHandler timeHandle = new TimerHandler(this);
 
-    public BingoNumbers bingoNumbers;
-    public BingoGrid dummyGrid;
-    public BingoGridDays daysGrid;
+    public JButton bingoButton;
 
     private MouseListener mouseListener;
     private ActionListener timer;
     private ActionListener buttonListener;
-    private int DELAY;
-=======
-    public MouseListener mouseListener;
-    public ActionListener buttonListener ;
-    public ActionListener timer;
+    private final int DELAY;
+
     public BingoNumbers bingoNumbers;
     public BingoGrid Grid;
     public BingoGridDays daysGrid;
 
-
-    private final int DELAY;
->>>>>>> Stashed changes
     public boolean startGame = true;
     public boolean winner = false;
 
 
     public BingoGame(int bgNum, String bgFileName) {
-
+        //create background
         createBingoBackgroud(bgNum, bgFileName);
-<<<<<<< Updated upstream
-        createBingoButton(bgNum);
-
-
-        ActionListener timer = new Timer();
-        DELAY = 3500;
-=======
-
-        JButton start = new JButton();
-        Main.Display.bgPanel[bgNum].add(start);
-        start.addActionListener(bingoGame.buttonListener);
 
         //create bingo button
         JButton bingoButton = new JButton();
@@ -71,31 +51,30 @@ public class BingoGame {
         bingoButton.setIcon(buttonIcon);
         buttonListener = (ActionListener) new ButtonListener(this);
         bingoButton.addActionListener(buttonListener);
-        Main.Display.bgPanel[bgNum].add(bingoButton);
+        Display.bgPanel[bgNum].add(bingoButton);
 
-        mouseListener = new MouseClickListener(this);
+        // Ball Time Handle
         timer = new TimerHandler(this);
-        DELAY = 2500;
->>>>>>> Stashed changes
+        DELAY = 3500;
         Timer t = new Timer(DELAY, timer);
         t.start();
 
         daysGrid = new BingoGridDays();
         bingoNumbers = new BingoNumbers();
 
-        Main.Display.bgPanel[bgNum].add(daysGrid);
-        Main.Display.bgPanel[bgNum].setVisible(true);
+        Display.bgPanel[bgNum].add(daysGrid);
+        Display.bgPanel[bgNum].setVisible(true);
 
-        Main.Display.bgPanel[bgNum].add(bingoNumbers);
-        Main.Display.bgPanel[bgNum].setVisible(true);
+        Display.bgPanel[bgNum].add(bingoNumbers);
+        Display.bgPanel[bgNum].setVisible(true);
 
+        mouseListener = new MouseClickListener(this);
         daysGrid.addMouseListener(mouseListener);
-        Main.Display.bgPanel[bgNum].setVisible(true);
-
+        Display.bgPanel[bgNum].setVisible(true);
 
     }
 
-    public void createBingoBackgroud(int bgNum, String bgFileName){
+    public void createBingoBackgroud(int bgNum, String bgFileName) {
         Main.Display.bgPanel[bgNum] = new JPanel();
         Main.Display.bgPanel[bgNum].setBounds(0, 0, 1310, 715); //ขนาดรูป
         Main.Display.bgPanel[bgNum].setBackground(Color.black);
@@ -107,6 +86,7 @@ public class BingoGame {
 
         //bgPanel[bgNum].add(bgLabel[1]);
     }
+
     public void createBingoButton(int bgNum) {
         JButton bingoButton = new JButton();
         bingoButton.setBounds(500, 600, 200, 89);
@@ -121,17 +101,9 @@ public class BingoGame {
         bingoButton.setIcon(buttonIcon);
 
 
-
         Main.Display.bgPanel[bgNum].add(bingoButton);
     }
-
-
-
-
 }
-
-
-
 
 
 

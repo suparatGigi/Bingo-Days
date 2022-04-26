@@ -1,4 +1,4 @@
-package Main;
+package Bingo;
 import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.Random;

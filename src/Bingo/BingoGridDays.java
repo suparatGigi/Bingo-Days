@@ -1,13 +1,10 @@
-package Main;
-
-import javax.swing.JComponent;
+package Bingo;
 
 import java.awt.*;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Font;
-import java.util.ArrayList;
-
+import java.awt.Color;
 
 public class BingoGridDays extends BingoGrid {
     public BingoGridDays() {
@@ -25,8 +22,8 @@ public class BingoGridDays extends BingoGrid {
         for (int row = 0; row < WIDTH; row++) {
             for (int col = 0; col < LENGTH; col++) {
                 BingoSquare square = grid[row][col];
-                if (row == 2 && col == 2) {}
-                else if (square.contains(x, y)) {
+                if (row == 2 && col == 2) {
+                } else if (square.contains(x, y)) {
                     if (square.getIsClicked()) {
                         square.setIsClicked(false);
                     } else {
@@ -57,6 +54,7 @@ public class BingoGridDays extends BingoGrid {
 
     /**
      * Draws the grid
+     *
      * @param g the graphics component
      */
     public void paintComponent(Graphics g) {
@@ -81,7 +79,7 @@ public class BingoGridDays extends BingoGrid {
                 g2.draw(square);
 
                 //highlights the square if it is clicked
-                if (square.getIsClicked() ) {
+                if (square.getIsClicked()) {
                     g2.setColor(Color.YELLOW);
                     g2.fill(square);
                     g2.setColor(Color.BLACK);
@@ -95,18 +93,19 @@ public class BingoGridDays extends BingoGrid {
                     g2.setColor(Color.BLACK);
                     g2.draw(square);
                 }
-////แก้เป็นสุ่ม free
+
                 //the middle space is a freebie
-                if (row == 2 && col == 2) {}
-                else {
+                if (row == 2 && col == 2) {
+                } else {
                     int value = grid[row][col].getValue();
-                    int xCoord = (int)square.getX() + (SQUARE_SIZE / 4);
-                    int yCoord = (int)square.getY() + (SQUARE_SIZE / 2) + (SQUARE_SIZE / 8);
+                    int xCoord = (int) square.getX() + (SQUARE_SIZE / 4);
+                    int yCoord = (int) square.getY() + (SQUARE_SIZE / 2) + (SQUARE_SIZE / 8);
                     if (value < 10)
                         g2.drawString(" " + value + "", xCoord, yCoord);
                     else
                         g2.drawString(value + "", xCoord, yCoord);
                 }
+
 
             }
         }

@@ -1,4 +1,4 @@
-package Main;
+package Bingo;
 
 import java.util.ArrayList;
 
@@ -126,8 +126,55 @@ public class BingoGrid {
             }
         }
         this.removeIsWinnerMark();
+
+
+        //check 4 corner
+        count = 0;
+            //0,0
+            BingoSquare square1 = grid[0][0];
+            if (square1.getStatus()) {
+                square1.setIsWinner(true);
+                count++;
+            }
+            if (count == winningNumber) {
+                return true;
+            }
+        this.removeIsWinnerMark();
+
+            //0,3
+            BingoSquare square2 = grid[0][3];
+            if (square2.getStatus()) {
+                square2.setIsWinner(true);
+                count++;
+            }
+            if (count == winningNumber) {
+                return true;
+            }
+        this.removeIsWinnerMark();
+
+            //3,0
+            BingoSquare square3 = grid[3][0];
+            if (square3.getStatus()) {
+                square3.setIsWinner(true);
+                count++;
+            }
+            if (count == winningNumber) {
+                return true;
+                }
+        this.removeIsWinnerMark();
+
+            //3,3
+            BingoSquare square4 = grid[3][3];
+            if (square4.getStatus()) {
+                square4.setIsWinner(true);
+                count++;
+            }
+            if (count == winningNumber) {
+                return true;
+            }
+        this.removeIsWinnerMark();
         return false;
-    }
+        }
 
     public void removeIsWinnerMark() {
         for (int row = 0; row < grid.length; row++) {

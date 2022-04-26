@@ -1,7 +1,6 @@
 package Event;
 
-import Main.BingoGame;
-import Main.BingoGridDays;
+import Bingo.BingoGame;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -12,6 +11,7 @@ public class MouseClickListener implements MouseListener {
     public MouseClickListener(BingoGame bingoGame){
         this.bingoGame = bingoGame;
     }
+
     @Override
     public void mousePressed(MouseEvent event){
         int x = event.getX();
