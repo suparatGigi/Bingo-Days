@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.Timer;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import Event.ButtonListener;
@@ -14,10 +15,6 @@ import Main.Display;
 public class BingoGame {
     public static final int WIDTH = 900;
     public static final int LENGTH = 700;
-
-    //public MouseClickListener mouse = new MouseClickListener;
-    //public ButtonListener button = new ButtonListener(this);
-    //public TimerHandler timeHandle = new TimerHandler(this);
 
     public JButton bingoButton;
 
@@ -81,8 +78,12 @@ public class BingoGame {
         Main.Display.bgPanel[bgNum].setLayout(null);
         Main.Display.window.add(Display.bgPanel[bgNum]);
 
+        Display.bgLabel[bgNum] = new JLabel();
+        Display.bgLabel[bgNum].setBounds(0, 0, 1310, 715);
+
         ImageIcon bgIcon = new ImageIcon(getClass().getClassLoader().getResource(bgFileName)); // เพิ่มBackground
-        Main.Display.bgLabel[bgNum].setIcon(bgIcon);
+        Display.bgLabel[bgNum].setIcon(bgIcon);
+
 
         //bgPanel[bgNum].add(bgLabel[1]);
     }
@@ -100,10 +101,11 @@ public class BingoGame {
         ImageIcon buttonIcon = new ImageIcon(getClass().getClassLoader().getResource("image/bingoButton.png")); // เพิ่มรูปปุ่ม
         bingoButton.setIcon(buttonIcon);
 
-
-        Main.Display.bgPanel[bgNum].add(bingoButton);
+        Display.bgPanel[bgNum].add(bingoButton);
     }
 }
+
+
 
 
 

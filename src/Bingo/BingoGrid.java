@@ -66,7 +66,7 @@ public class BingoGrid {
      * return true if grid has won
      */
     public boolean checkWin() {
-        int winningNumber = 5;
+        int winningNumber = 4;
         int count;
 
         //checks the rows
@@ -187,4 +187,6 @@ public class BingoGrid {
     public void setWinnerMessage(String newMsg) {
         winnerMessage = newMsg;
     }
+
+
 }

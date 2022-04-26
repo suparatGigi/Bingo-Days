@@ -5,6 +5,8 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Font;
 import java.awt.Color;
+import java.awt.event.MouseListener;
+import java.util.Random;
 
 public class BingoGridDays extends BingoGrid {
     public BingoGridDays() {
@@ -94,8 +96,11 @@ public class BingoGridDays extends BingoGrid {
                     g2.draw(square);
                 }
 
+                Random random = new Random();
+                int rowRandom = random.nextInt(0,3);
+                int colRandom = random.nextInt(0,3);
                 //the middle space is a freebie
-                if (row == 2 && col == 2) {
+                if (row == rowRandom && col == colRandom) {
                 } else {
                     int value = grid[row][col].getValue();
                     int xCoord = (int) square.getX() + (SQUARE_SIZE / 4);
